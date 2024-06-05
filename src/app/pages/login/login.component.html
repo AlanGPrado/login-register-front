@@ -1,0 +1,16 @@
+<main>
+  <div class="parent-container">
+    <div class="child-container">
+      <img [src]="img" alt="">
+      <h1>LOGIN ACCOUNT</h1>
+      <div class="inputs-container">
+        <input [(ngModel)]="email" placeholder="Email" type="text"/>
+        <input [(ngModel)]="password" placeholder="Password" type="password">
+        <button (click)="submit()">Login</button>
+      </div>
+      <span register>
+        <p>Doesn't have an account? <a routerLink="/register">Register.</a></p>
+      </span>
+    </div>
+  </div>
+</main>
