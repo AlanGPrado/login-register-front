@@ -26,8 +26,6 @@ export class LoginComponent {
   constructor(private http: HttpClient, private router: Router, private sharedService: SharedService) { }
 
   ngOnInit() {
-    this.http.get<Post[]>(this.backendUrl)
-      .subscribe(post => console.log(post))
   }
 
   submit() {
