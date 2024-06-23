@@ -1,2 +1,5 @@
-<button (click)="logout()">Logout X</button>
-<h1>Bienvenido de vuelta {{ (user$ | async)?.fullname }}!</h1>
+<app-header></app-header>
+<main>
+  <h1>¡Bienvenido de vuelta, {{ (user$ | async)?.fullname }}!</h1>
+  <h2>Ver. 1.0.0</h2>
+</main>

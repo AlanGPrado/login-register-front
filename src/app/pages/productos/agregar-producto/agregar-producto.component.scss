@@ -1,0 +1,112 @@
+[parent-container-add] {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  padding-top: 12vh;
+  height: 100%;
+
+  [child-container] {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+
+    form {
+      display: flex;
+      gap: 15px;
+      flex-direction: column;
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      .file-input-wrapper {
+        position: relative;
+        display: inline-block;
+        height: 76px;
+
+        button {
+          height: 50px;
+          padding: 0 20px;
+          cursor: pointer;
+          background-color: #F5F5F5;
+          color: #0063B8;
+          // font-weight: bold;
+          border: none;
+          border-radius: 0px;
+          font-size: 16px;
+          width: 100%;
+          border-bottom: 1px solid #0063B8;
+          display: flex;
+          align-items: center;
+          padding: 0 12px;
+
+          mat-icon {
+            color: #0063B8;
+            padding-right: 16px;
+          }
+        }
+
+        input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+
+      .file-input-wrapper:hover>button {
+        background-color: #ECECEC !important;
+      }
+
+      .img-preview {
+        display: flex;
+        align-items: center;
+        h3 {
+          width: 50%;
+          font-weight: 300;
+        }
+
+        img {
+          width: 50%;
+          height: auto;
+          border: 1px solid black;
+          background-color: rgb(128, 128, 128);
+        }
+      }
+
+      .add-margin {
+        margin: 50px 0;
+      }
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    button {
+      background-color: #0F0F0F;
+      color: white;
+      font-size: 18px;
+      width: auto;
+      height: 40px;
+      border-radius: 12px;
+      // margin: 20px 0 0 20px;
+      // font-weight: bold;
+      cursor: pointer;
+    }
+
+    .disabled-button {
+      background-color: #E4E4E4;
+    }
+  }
+}

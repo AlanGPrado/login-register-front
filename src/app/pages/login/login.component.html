@@ -1,15 +1,15 @@
 <main>
   <div class="parent-container">
     <div class="child-container">
-      <img [src]="img" alt="">
-      <h1>LOGIN ACCOUNT</h1>
+      <img src="assets/images/user_icon.png" alt="">
+      <h1>INICIA SESIÓN</h1>
       <div class="inputs-container">
         <input [(ngModel)]="email" placeholder="Email" type="text"/>
-        <input [(ngModel)]="password" placeholder="Password" type="password">
-        <button (click)="submit()">Login</button>
+        <input [(ngModel)]="password" placeholder="Contraseña" type="password">
+        <button (click)="submit()">Ingresar</button>
       </div>
       <span register>
-        <p>Doesn't have an account? <a routerLink="/register">Register.</a></p>
+        <p>¿No tienes una cuenta? <a routerLink="/register">Registrate.</a></p>
       </span>
     </div>
   </div>

@@ -1,0 +1,60 @@
+<app-header *ngIf="flagDialog"></app-header>
+<div parent-container-add>
+  <div child-container>
+    <h2>{{ title }}</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <mat-icon matPrefix>assignment_turned_in</mat-icon>
+        <input matInput formControlName="nombre" type="text" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Descripci&oacute;n</mat-label>
+        <mat-icon matPrefix>assignment</mat-icon>
+        <input matInput formControlName="descripcion" type="text" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Categor&iacute;a</mat-label>
+        <mat-icon matPrefix>category</mat-icon>
+        <mat-select formControlName="categoria">
+          <mat-option>— Selecciona una opción —</mat-option>
+          <mat-option *ngFor="let category of categories;let i = index;" [value]="categories.indexOf(category)">{{category}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>SKU</mat-label>
+        <mat-icon matPrefix>inventory</mat-icon>
+        <input matInput formControlName="sku" type="text" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Costo</mat-label>
+        <mat-icon matPrefix>monetization_on</mat-icon>
+        <input matInput formControlName="costo" type="number">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Precio</mat-label>
+        <mat-icon matPrefix>sell</mat-icon>
+        <input matInput formControlName="precio" type="number">
+      </mat-form-field>
+
+      <div class="file-input-wrapper">
+        <button><mat-icon matPrefix>add_photo_alternate</mat-icon>Subir imagen</button>
+        <input type="file" accept="image/png, image/jpeg" (change)="uploadImage($event)"/>
+      </div>
+
+      <div class="img-preview" *ngIf="imageLocal">
+        <h3>Imagen subida:</h3>
+        <img [src]="imageLocal" alt="Uploaded Image"/>
+      </div>
+      <button *ngIf="flagDialog" [class.add-margin]="imageLocal" mat-raised-button [disabled]="!productForm.valid"
+        [class.disabled-button]="!productForm.valid">AGREGAR</button>
+      </form>
+      <button [class.add-margin]="imageLocal" mat-raised-button [disabled]="!productForm.valid"
+        [class.disabled-button]="!productForm.valid" (click)="editItem()">EDITAR</button>
+  </div>
+</div>

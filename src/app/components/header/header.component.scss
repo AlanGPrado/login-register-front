@@ -1,0 +1,63 @@
+:host {
+  display: block;
+}
+
+  .__bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background: #0F0F0F;
+    z-index: 9;
+  }
+
+  .__button,
+  .__menu {
+    position: absolute;
+  }
+
+  .__button {
+    left: 20px;
+    top: 23px;
+    z-index: 1;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+
+    transition: opacity 200ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .__menu {
+    left: 0;
+    top: 12px;
+
+    width: 100%;
+    // padding: 0 80px;
+
+    text-align: center;
+  }
+
+  .avatar {
+    position: absolute;
+    right: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    img {
+      background-color: whitesmoke;
+      width: 50px;
+      height: auto;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }

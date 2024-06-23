@@ -1,0 +1,11 @@
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: 20px !important;
+  padding: 20px;
+}
+
+mat-dialog-content {
+  p {
+    font-weight: bold;
+    color: black;
+  }
+}

@@ -1,0 +1,20 @@
+<div class="__bar">
+  <!-- <span class="button-logout">
+    <button (click)="logout()">❌ <strong>Salir</strong></button>
+  </span> -->
+
+  <button class="__button" (click)="toggleOpen()">
+    <app-burguer [open]="open"></app-burguer>
+  </button>
+
+  <app-menu
+    class="__menu"
+    [expanded]="open"
+    [items]="items"
+    (onItemClick)="toggleOpen()">
+  </app-menu>
+
+  <div class="avatar">
+    <img src="assets/images/user_icon.png" alt="user icon" [title]="(user$ | async)?.fullname">
+  </div>
+</div>

@@ -1,0 +1,16 @@
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: 20px !important;
+  padding: 20px;
+}
+
+::ng-deep [parent-container-add] {
+  padding-top: 0vh !important;
+  width: 40vw !important;
+  [child-container] {
+    width: 50% !important;
+  }
+
+  form {
+    gap: 0 !important;
+  }
+}

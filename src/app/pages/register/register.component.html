@@ -4,23 +4,23 @@
       <span style="margin: 5% 0 0 10%; width: 100%;display: flex;">
         <a routerLink="/" style="display: flex;align-items: center;">
           <mat-icon style="font-size:30px; height:auto;">arrow_back_ios</mat-icon>
-          <p>Login</p>
+          <p style="margin: 0;">Login</p>
         </a>
       </span>
       <span class="img-container">
-        <img [src]="img" alt="">
-        <img [src]="img2" alt="">
+        <img src="assets/images/user_icon.png" alt="">
+        <img [src]="img2" alt="" style="width: 70px;">
       </span>
-      <h1>REGISTER NOW</h1>
+      <h1>CREAR CUENTA</h1>
       <div class="inputs-container">
         <mat-form-field appearance="fill">
-          <mat-label>Full Name</mat-label>
+          <mat-label>Nombre Completo</mat-label>
           <mat-icon matPrefix>person</mat-icon>
           <input [(ngModel)]="fullName" matInput type="text" />
         </mat-form-field>
 
         <mat-form-field appearance="fill">
-          <mat-label>Phone Number</mat-label>
+          <mat-label>N&uacute;mero celular</mat-label>
           <mat-icon matPrefix>phone</mat-icon>
           <input [(ngModel)]="mobileNumber" matInput type="tel" />
         </mat-form-field>
@@ -32,11 +32,11 @@
         </mat-form-field>
 
         <mat-form-field appearance="fill">
-          <mat-label>Password</mat-label>
+          <mat-label>Contraseña</mat-label>
           <mat-icon matPrefix>lock</mat-icon>
           <input [(ngModel)]="password" matInput type="password" autocomplete="off">
         </mat-form-field>
-        <button (click)="register()">Register</button>
+        <button (click)="register()">Registrar</button>
       </div>
     </div>
   </div>

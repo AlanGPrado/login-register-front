@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div parent-container>
+  <div child-container>
+    <h2>EDITAR PRODUCTO</h2>
+    <ng-container *ngIf="products$ | async as products;">
+      <div class="item-parent" [ngStyle]="getParentStyle()">
+        <div class="item-container" *ngFor="let product of products; let i = index;">
+          <img [src]="product.image" alt="">
+          <span class="cover">
+            <h3>{{product.name_product}}</h3>
+            <p>{{product.desc_product}}</p>
+          </span>
+          <mat-icon class="more-options" (click)="toggleMenu(i)" title="Opciones">more_vert</mat-icon>
+          <span class="menu" [class.show]="showMenuIndex === i">
+            <mat-icon title="Ver">visibility</mat-icon>
+            <mat-icon title="Editar" (click)="openDialogEdit(i);">edit</mat-icon>
+            <mat-icon title="Eliminar" (click)="openDialogDelete(i)">delete</mat-icon>
+          </span>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="noItemsFound">
+      <div style="text-align: center;">
+        <img src="assets/images/empty.png" alt="empty_img" loading="lazy" width="128" height="128">
+        <h3>No se ha encontrado ningún producto</h3>
+        <p>Agregue un producto y aparecerá aquí.</p>
+      </div>
+    </ng-container>
+  </div>
+</div>

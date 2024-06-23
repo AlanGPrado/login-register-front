@@ -48,3 +48,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     justify-content: start !important;
   }
 }
+
+button {
+  cursor: pointer;
+}
+
+.dialog-open .mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: 20px !important;
+  padding: 20px;
+}
+
+.dialog-open [parent-container-add] {
+  padding-top: 0vh !important;
+  width: 35vw !important;
+  [child-container] {
+    width: 50% !important;
+  }
+
+  form {
+    gap: 0 !important;
+  }
+}

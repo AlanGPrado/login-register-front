@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div parent-container>
+  <h2>EDITAR CUENTA</h2>
+  <div child-container>
+    <mat-form-field appearance="fill">
+      <mat-label>Full Name</mat-label>
+      <mat-icon matPrefix>account_circle</mat-icon>
+      <input [(ngModel)]="fullname" matInput type="text" (ngModelChange)="checkIfAnyFieldFilled()"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Phone Number</mat-label>
+      <mat-icon matPrefix>phone</mat-icon>
+      <input [(ngModel)]="mobilenumber" matInput type="tel" (ngModelChange)="checkIfAnyFieldFilled()"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <mat-icon matPrefix>email</mat-icon>
+      <input [(ngModel)]="email" matInput type="text" (ngModelChange)="checkIfAnyFieldFilled()"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <mat-icon matPrefix>lock</mat-icon>
+      <input [(ngModel)]="password" matInput type="password" autocomplete="off" (ngModelChange)="checkIfAnyFieldFilled()"/>
+    </mat-form-field>
+    <button mat-raised-button class="button-add" (click)="editUser()" [disabled]="!isAnyFieldFilled" [class.disabled-button]="!isAnyFieldFilled">EDITAR</button>
+    <button mat-raised-button class="button-delete" (click)="deleteUser()">ELIMINAR</button>
+  </div>
+</div>
